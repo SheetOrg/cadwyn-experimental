@@ -27,7 +27,7 @@ jobs:
         with:
           cache: 'poetry'
 
-      - run: poetry install
+      - run: poetry install --all-extras
       - run: echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
 
       - uses: jakebailey/pyright-action@v1
